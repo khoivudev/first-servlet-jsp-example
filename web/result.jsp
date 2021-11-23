@@ -12,7 +12,7 @@
             %>
         </p>
         <p>
-            Contact Email: <% out.print(request.getAttribute("adminEmail"));%>
+            Contact Email: <%= pageContext.getServletContext().getInitParameter("adminEmail") %>
         </p>
     </body>
 </html>
