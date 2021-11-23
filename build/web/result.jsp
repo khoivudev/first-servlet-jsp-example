@@ -11,5 +11,8 @@
                 }
             %>
         </p>
+        <p>
+            Contact Email: <% out.print(request.getAttribute("adminEmail"));%>
+        </p>
     </body>
 </html>

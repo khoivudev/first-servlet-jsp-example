@@ -13,7 +13,10 @@ public class BeerSelect extends HttpServlet {
         BeerExpert be = new BeerExpert();
         List result = be.getBrands(c);
         
+        String adminEmail = getServletConfig().getInitParameter("adminEmail");
+        
         request.setAttribute("styles", result);
+        request.setAttribute("adminEmail", adminEmail);
         
         RequestDispatcher view = request.getRequestDispatcher("result.jsp");
         view.forward(request, response);
